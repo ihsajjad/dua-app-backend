@@ -14,9 +14,9 @@ pids/
 *.seed
 *.pid.lock
 
-# SQLite database
-*.sqlite
-*.sqlite-journal
+# # SQLite database
+# *.sqlite
+# *.sqlite-journal
 
 # Environment variables
 .env
