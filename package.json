@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "nodemon",
     "test-build": "npm install && npx tsc",
-    "build": "tsc && cpx \"src/database/dua_main.sqlite\" dist/database",
-    "start": "node ./dist/server.js"
+    "build": "tsc && cpx \"src/database/dua_main.sqlite\" dist/src/database",
+    "start": "node ./dist/src/server.js"
   },
   "keywords": [],
   "author": "",
