@@ -1,9 +1,12 @@
 {
   "name": "dua-app-backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./src/server.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon",
+    "test-build": "npm install && npx tsc",
+    "build": "npm install && npx tsc",
+    "start": "node ./dist/src/index.js"
   },
   "keywords": [],
   "author": "",
