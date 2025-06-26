@@ -6,8 +6,10 @@ import duaRoutes from "./routes/dua.routes";
 import subCategoryRoutes from "./routes/subCategory.routes";
 const app = express();
 
-app.use(cors());
 app.use(express.json());
+app.use(cors());
+app.use(express.urlencoded({ extended: true }));
+
 
 app.use("/api/categories", categoryRoutes);
 app.use("/api/duas", duaRoutes);

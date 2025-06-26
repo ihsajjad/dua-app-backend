@@ -3,12 +3,14 @@ import db from "../db";
 
 const router = express.Router();
 
-router.get("/", (req: Request, res: Response) => {
+router.get("/:subcat_id", (req: Request, res: Response) => {
   try {
-    const duas = db.prepare("SELECT * FROM dua").all();
+    const subcat_id = req.params.subcat_id;
+
+    const duas = db.prepare("SELECT * FROM dua WHERE subcat_id = ?").all(subcat_id);
     res.json(duas);
   } catch (error: any) {
-    console.log(`Error in : ${__filename}, message: `, error.mesage);
+    console.log(`Error in : ${__filename}, message: , error.mesage`);
     res.status(500).json({ success: false, message: "Internal server error" });
   }
 });
